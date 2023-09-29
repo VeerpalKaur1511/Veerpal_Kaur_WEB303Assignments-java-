@@ -9,7 +9,7 @@ function getJsonData (){
     console.log(data);
       $.each(data.members, function(index, obj){
         $('div#team').append($("<h2>" + obj.name + "</h2>"));
-        $('div#team').append($("<h5>" + obj.position + "</h3>"));
+        $('div#team').append($("<h5>" + obj.position + "</h5>"));
         $('div#team').append($("<p>" + obj.bio + "</p>"));
       });
     });
@@ -36,7 +36,7 @@ $(document).ready(function(){
             $.each(result.members, function(index, obj){
               $('p:first-of-type').fadeOut(2000);
               $('div#team').append($("<h2>" + obj.name + "</h2>"));
-              $('div#team').append($("<h5>" + obj.position + "</h3>"));
+              $('div#team').append($("<h5>" + obj.position + "</h5>"));
               $('div#team').append($("<p>" + obj.bio + "</p>"));
             });
         },
