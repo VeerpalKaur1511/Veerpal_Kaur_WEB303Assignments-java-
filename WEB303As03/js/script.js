@@ -41,7 +41,7 @@ $(document).ready(function(){
           });
       },
       error: function() {
-        $("#team").text("Error: Content could not be retrieved.");
+        $("div#team").text("Error: Content could not be retrieved.");
       }
     });
   };
