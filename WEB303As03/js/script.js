@@ -40,7 +40,7 @@ $(document).ready(function(){
             $('div#team').append($("<p>" + obj.bio + "</p>"));
           });
           setTimeout(function () {
-            $("#team").empty();
+            $("div#team").empty();
           }, 3000);
       },
       error: function() {
