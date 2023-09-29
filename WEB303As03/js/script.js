@@ -22,8 +22,7 @@ $(document).ready(function(){
 // using the same jquery using $.ajax
 
   function getDataByAjax(){
-    // Display "Loading..." before sending the AJAX request
-    $('div#team').append($("<p>" + "Loading..." + "</p>"));
+
     $.ajax({
       type: "GET",
       url: "team.json",
