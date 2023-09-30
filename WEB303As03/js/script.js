@@ -39,6 +39,10 @@ $(document).ready(function(){
             $('div#team').append($("<h5>" + obj.position + "</h5>"));
             $('div#team').append($("<p>" + obj.bio + "</p>"));
           });
+          setTimeout(function() {
+            // Hide the loading message after 3 seconds
+            $('#loading...').hide();
+          }, 3000);
       },
       error: function() {
         $("div#team").text("Error: Content could not be retrieved.");
