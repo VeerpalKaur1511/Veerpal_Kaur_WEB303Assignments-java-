@@ -71,19 +71,28 @@ $(document).ready(function () {
         categoryGenre : 'Jazz' 
       }
     ]
-    contentItem.forEach(contentItem => {
+    for(i = 0; i < allitems.length; i++){
+      $('#content-item-list').append(
+  '<div class ="content-item-wrapper"id= "content-item-' +allitems[i].id +'">'+
+   '<h4>Name:- '+ allitems[i].name+'</h4>'+
+   '<p>Description :- '+ allitems[i].description+' </p>'+
+   '<div> CategoryGenre :- '+ allitems[i].categoryGenre+' </div>'+
+    '</div>');
+    
+  };
+    // contentItem.forEach(contentItem => {
 
-        const contentItemHTML = contentItem.toString();
-        // Create a jQuery element from the HTML
-        const $contentItem = $(contentItemHTML);
-        // Apply styles to the .content-item-wrapper
-        $contentItem.find('.content-item-wrapper').css({
-            border: '3px solid black',  
-            width: '400px',           
-            padding: '15px',          
-            margin: '8px auto',      
-        });
-    });
+    //     const contentItemHTML = contentItem.toString();
+    //     // Create a jQuery element from the HTML
+    //     const $contentItem = $(contentItemHTML);
+    //     // Apply styles to the .content-item-wrapper
+    //     $contentItem.find('.content-item-wrapper').css({
+    //         border: '3px solid black',  
+    //         width: '400px',           
+    //         padding: '15px',          
+    //         margin: '8px auto',      
+    //     });
+    //});
     //succssfull button click
           $('#successful-button').click(function(){
             updateContentItemSuccessfully();
