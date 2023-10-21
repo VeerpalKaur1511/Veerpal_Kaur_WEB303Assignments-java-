@@ -78,21 +78,14 @@ $(document).ready(function () {
    '<p>Description :- '+ allitems[i].description+' </p>'+
    '<div> CategoryGenre :- '+ allitems[i].categoryGenre+' </div>'+
     '</div>');
+    contentItem.find('.content-item-wrapper').css({
+      border: '3px solid black',  
+      width: '400px',           
+      padding: '15px',          
+      margin: '8px auto',      
+  });
     
   };
-    contentItem.forEach(contentItem => {
-
-        const contentItemHTML = contentItem.toString();
-        // Create a jQuery element from the HTML
-        const $contentItem = $(contentItemHTML);
-        // Apply styles to the .content-item-wrapper
-        $contentItem.find('.content-item-wrapper').css({
-            border: '3px solid black',  
-            width: '400px',           
-            padding: '15px',          
-            margin: '8px auto',      
-        });
-    });
     //succssfull button click
           $('#successful-button').click(function(){
             updateContentItemSuccessfully();
