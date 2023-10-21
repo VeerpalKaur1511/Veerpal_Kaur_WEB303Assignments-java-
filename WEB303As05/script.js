@@ -80,19 +80,19 @@ $(document).ready(function () {
     '</div>');
     
   };
-    // contentItem.forEach(contentItem => {
+    contentItem.forEach(contentItem => {
 
-    //     const contentItemHTML = contentItem.toString();
-    //     // Create a jQuery element from the HTML
-    //     const $contentItem = $(contentItemHTML);
-    //     // Apply styles to the .content-item-wrapper
-    //     $contentItem.find('.content-item-wrapper').css({
-    //         border: '3px solid black',  
-    //         width: '400px',           
-    //         padding: '15px',          
-    //         margin: '8px auto',      
-    //     });
-    //});
+        const contentItemHTML = contentItem.toString();
+        // Create a jQuery element from the HTML
+        const $contentItem = $(contentItemHTML);
+        // Apply styles to the .content-item-wrapper
+        $contentItem.find('.content-item-wrapper').css({
+            border: '3px solid black',  
+            width: '400px',           
+            padding: '15px',          
+            margin: '8px auto',      
+        });
+    });
     //succssfull button click
           $('#successful-button').click(function(){
             updateContentItemSuccessfully();
