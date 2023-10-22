@@ -73,18 +73,11 @@ $(document).ready(function () {
     ]
     for(i = 0; i < allitems.length; i++){
       $('#content-item-list').append(
-  '<div class ="content-item-wrapper"id= "content-item-' +allitems[i].id +'">'+
+  '<div class ="content-item-wrapper"id= "content-item-' +allitems[i].id + '">'+
    '<h4>Name:- '+ allitems[i].name+'</h4>'+
    '<p>Description :- '+ allitems[i].description+' </p>'+
    '<div> CategoryGenre :- '+ allitems[i].categoryGenre+' </div>'+
-    '</div>');
-    contentItem.find('.content-item-wrapper').css({
-      border: '3px solid black',  
-      width: '400px',           
-      padding: '15px',          
-      margin: '8px auto',      
-  });
-    
+    '</div>'); 
   };
     //succssfull button click
           $('#successful-button').click(function(){
