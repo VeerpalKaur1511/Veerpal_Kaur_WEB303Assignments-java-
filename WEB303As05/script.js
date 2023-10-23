@@ -87,4 +87,13 @@ $(document).ready(function () {
         $('#unsuccessful-button').click(function(){
             updateContentItemUnsuccessfully();
         });
+        // Apply styles using jQuery
+        $contentItem.css({
+          border: '1px solid #000',
+          width: '300px', // Adjust as needed
+          padding: '10px', // Adjust as needed
+          margin: '20px auto', // Center horizontally and add space above and below
+      });
+
+      $contentList.append($contentItem);
 });
