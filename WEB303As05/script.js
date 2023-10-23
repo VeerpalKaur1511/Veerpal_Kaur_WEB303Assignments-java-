@@ -90,10 +90,10 @@ $(document).ready(function () {
         // Apply styles using jQuery
         for(i = 0; i < allsingers.length; i++){
         $('#content-item-list').css({
-          border: '1px solid #000',
-          width: '300px', // Adjust as needed
-          padding: '10px', // Adjust as needed
-          margin: '20px auto', // Center horizontally and add space above and below
+          border: '4px solid blue ',
+          width: '250px', // Adjust as needed
+          padding: '15px', // Adjust as needed
+          margin: '40px auto', // Center horizontally and add space above and below
          } )};
         
 });
