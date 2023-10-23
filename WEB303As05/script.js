@@ -88,7 +88,7 @@ $(document).ready(function () {
             updateContentItemUnsuccessfully();
         });
         // Apply styles using jQuery
-        contentItem.css({
+        $('#content-item-list').append({
           border: '1px solid #000',
           width: '300px', // Adjust as needed
           padding: '10px', // Adjust as needed
