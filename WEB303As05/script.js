@@ -39,7 +39,7 @@ $(document).ready(function () {
         }
     }
     // crete a list of Singers
-    let allitems = [
+    let allsingers = [
         {
         id : '1',
         name : 'Jassi Gill',
@@ -71,12 +71,12 @@ $(document).ready(function () {
         categoryGenre : 'Jazz' 
       }
     ]
-    for(i = 0; i < allitems.length; i++){
+    for(i = 0; i < allsingers.length; i++){
       $('#content-item-list').append(
-  '<div class ="content-item-wrapper"id= "content-item-' +allitems[i].id + '">'+
-   '<h4>Name:- '+ allitems[i].name+'</h4>'+
-   '<p>Description :- '+ allitems[i].description+' </p>'+
-   '<div> CategoryGenre :- '+ allitems[i].categoryGenre+' </div>'+
+  '<div class ="content-item-wrapper"id= "content-item-' +allsingers[i].id + '">'+
+   '<h4>Name:- '+ allsingers[i].name+'</h4>'+
+   '<p>Description :- '+ allsingers[i].description+' </p>'+
+   '<div> CategoryGenre :- '+ allsingers[i].categoryGenre+' </div>'+
     '</div>'); 
   };
     //succssfull button click
