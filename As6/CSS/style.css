@@ -1,0 +1,80 @@
+/*
+Name: Veerpal Kaur
+Student id : 0826070
+*/
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: rgb(105, 205, 245);
+    border: 2px solid black;
+    margin: 1em 1em 1em 1em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-style: italic;
+    border: 2px solid black;
+    margin: 0.5em 3em 1em 3em;
+}
+h2{
+    text-align: center;
+    font-size: 2.5em;
+    font-style: normal;
+    text-decoration: underline;
+}
+img{
+    width: 15em;
+    height: 15em;
+    margin: 0.5em 5em 1em 27em;
+}
+button {
+    width: 30%;
+    background-color: rgb(248, 199, 228);
+    font-size: 2em;
+    margin: 0.5em 0em 0em 12em;
+}
+
+.accord-panel{
+    display: none;
+}
+
+.accord{
+    list-style-type: none;
+}
+
+.tab-list {
+    margin: 0;
+    padding: 0;
+}
+
+.tab-list li {
+    display: inline-block;
+    background-color:rgb(248, 199, 228);
+    margin: 0.2em 4em 0.1em 3em;
+    border: 2px solid black;
+}
+
+.tab-list li a{
+    display: block;
+    color: black;
+    padding: 3px 10px 3px 10px;
+    font-size: 1.5em;
+
+}
+.tab-panel{
+    font-size: 1.3em;
+    margin: 1em 1em 1em 1em;
+    background-color: rgb(244, 179, 179);
+}
+.tab-list li.active{
+    background-color: rgb(110, 110, 247);
+}
+
+pre{
+    margin: 0em 0em 0em 13em;
+    font-size: 2em;
+}
