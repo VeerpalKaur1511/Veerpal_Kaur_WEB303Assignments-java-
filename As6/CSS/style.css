@@ -15,14 +15,14 @@ html{
 
 h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     font-style: italic;
     border: 2px solid black;
     margin: 0.5em 3em 1em 3em;
 }
 h2{
     text-align: center;
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-style: normal;
     text-decoration: underline;
 }
@@ -35,7 +35,7 @@ button {
     width: 30%;
     background-color: rgb(248, 199, 228);
     font-size: 2em;
-    margin: 0.5em 0em 0em 12em;
+  
 }
 
 .accord-panel{
@@ -75,6 +75,6 @@ button {
 }
 
 pre{
-    margin: 0em 0em 0em 13em;
+   
     font-size: 2em;
 }
