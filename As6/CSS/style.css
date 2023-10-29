@@ -32,7 +32,7 @@ img{
     margin: 0.5em 5em 1em 27em;
 }
 button {
-    width: 30%;
+    width: 100%;
     background-color: rgb(248, 199, 228);
     font-size: 2em;
   
@@ -75,6 +75,5 @@ button {
 }
 
 pre{
-   
     font-size: 2em;
 }
