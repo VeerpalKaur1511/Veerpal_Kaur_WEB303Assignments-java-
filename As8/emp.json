@@ -1,0 +1,62 @@
+[
+    {
+        "firstname": "Yuvraj",
+        "lastName" : "Hans",
+        "age": "25",
+        "occupation": "Actor",
+        "city": "Barnala",
+        "charName" : "Paali" ,
+        "role" : "Deputy" 
+        
+
+
+    },
+    {
+        "firstname": "Binnu",
+        "lastName" : "Dhillon" ,
+        "age": "35",
+        "occupation": "Hero",
+        "city": "london",
+        "charName" : "Neeru" ,
+        "role" : "Japji"
+
+
+    },
+    {
+        "firstname": "Jassi",
+        "lastName" : "Gill",
+        "age": "27",
+        "occupation": "Singer",
+        "city": "Bathinda",
+        "charName" : "Jass" ,
+        "role" : "Chhada" 
+
+
+    },
+    {
+        "firstname": "Babbal",
+        "lastName" : "Rai" ,
+        "age": "45",
+        "occupation": "Actor",
+        "city": "Quebec",
+        "charName" : "Babbu" ,
+        "role" : "Pinky"
+
+
+    },
+    {
+        "firstname": "Jaswinder",
+        "lastName" : "Bhalla",
+        "age": "65",
+        "occupation": "Master Singer",
+        "city": "Amritsar ",
+        "charName" : "Subeedaar" ,
+        "role" : "kirpall" 
+
+
+    }
+    
+    
+    
+
+]

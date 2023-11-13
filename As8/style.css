@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(221, 230, 173);
+}
+input {
+    margin-left: 10px;
+    border: 2px solid brown;
+    width: 20%;
+    padding: 5px;
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-style: italic;
+    text-decoration: wavy;
+    border: 1px solid brown;
+}
+table {
+    margin: 20px auto;
+    border: 2px solid brown;
+}
+
+td {
+    width: 10%;
+    font-size: 20px;
+}
+
+thead td {
+    font-weight: bold;
+}
+
+button {
+    width: 20%;
+    margin: 5%;
+    padding: 8px;
+    border: 2px solid brown;
+    background-color: beige;
+    font-weight: bold;
+    cursor: pointer;
+}
