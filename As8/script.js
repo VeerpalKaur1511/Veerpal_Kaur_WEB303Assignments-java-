@@ -28,7 +28,9 @@ $headingRow.append($('<td/>').text('Role'));
 $('h1').after('<input/>');
 $('input').attr('id', 'search');
 
-
+// dd  a button after table 
+$('table').after( '<button onclick="filter-AM">A - M (0)</button>')
+$('table').after('<button onclick="filter-NZ">N - Z (0)</button>')
 
 // get content of json file 
 
@@ -96,39 +98,41 @@ $.ajax({
         }
 
 
-         // Filter table function
-         function filterCharacters() {
-            const rows = $('#charactersTable tbody tr');
+            // Filter table function
+            function filterCharacters() {
+                const rows = $('#charactersTable tbody tr');
+        
+                const countAM = rows.filter(function() {
+                    const lastName = $(this).find('td:nth-child(2)').text();
+                    return lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
+                }).length;
+        
+                const countNZ = rows.length - countAM;
+        
+                $('#filterAM').text(`A - M (${countAM})`);
+                $('#filterNZ').text(`N - Z (${countNZ})`);
+        
+                rows.each(function() {
+                    const lastName = $(this).find('td:nth-child(2)').text();
+                    const showAM = lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
+                    const showNZ = lastName.toUpperCase().charCodeAt(0) > 'M'.charCodeAt(0);
+        
+                    if ($('#filterAM').hasClass('active')) {
+                        $(this).toggle(showAM);
+                    } else if ($('#filterNZ').hasClass('active')) {
+                        $(this).toggle(showNZ);
+                    } else {
+                        $(this).show();
+                    }
+                });
+            }
+        
+            $('#filterAM, #filterNZ').on('click', function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                filterCharacters();
+            }
     
-            const countAM = rows.filter(function() {
-                const lastName = $(this).find('td:nth-child(2)').text();
-                return lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
-            }).length;
-    
-            const countNZ = rows.length - countAM;
-    
-            $('#filterAM').text(`A - M (${countAM})`);
-            $('#filterNZ').text(`N - Z (${countNZ})`);
-    
-            rows.each(function() {
-                const lastName = $(this).find('td:nth-child(2)').text();
-                const showAM = lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
-                const showNZ = lastName.toUpperCase().charCodeAt(0) > 'M'.charCodeAt(0);
-    
-                if ($('#filterAM').hasClass('active')) {
-                    $(this).toggle(showAM);
-                } else if ($('#filterNZ').hasClass('active')) {
-                    $(this).toggle(showNZ);
-                } else {
-                    $(this).show();
-                }
-            });
-        }
-    
-        $('#filterAM, #filterNZ').on('click', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-            filterCharacters();
-        }
+            )},
 
-        )},
-});
+    
+})
