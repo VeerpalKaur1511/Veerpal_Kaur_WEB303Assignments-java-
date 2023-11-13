@@ -99,7 +99,7 @@ $.ajax({
 
 
             // Filter table function
-            function filterCharacters() {
+            function filterEmp() {
                 const rows = $('#charactersTable tbody tr');
         
                 const countAM = rows.filter(function() {
@@ -129,7 +129,7 @@ $.ajax({
         
             $('#filterAM, #filterNZ').on('click', function() {
                 $(this).addClass('active').siblings().removeClass('active');
-                filterCharacters();
+                filterEmp();
             }
     
             )},
