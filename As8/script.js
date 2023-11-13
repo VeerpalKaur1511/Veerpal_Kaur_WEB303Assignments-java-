@@ -28,9 +28,7 @@ $headingRow.append($('<td/>').text('Role'));
 $('h1').after('<input/>');
 $('input').attr('id', 'search');
 
-// dd  a button after table 
-$('table').after( '<button onclick="filter-AM">A - M (0)</button>')
-$('table').after('<button onclick="filter-NZ">N - Z (0)</button>')
+
 
 // get content of json file 
 
@@ -99,23 +97,38 @@ $.ajax({
 
 
          // Filter table function
-    function filter(filter) {
-        // Show all rows initially
-        $("#lastName tbody tr").removeClass("hidden");
-  
-        // Hide rows based on the filter criteria
-        if (filter === 'A-M') {
-          $("#lastName tbody tr td:nth-child(2):not(:containsRegex('^[a-mA-M]'))").parent().addClass("hidden");
-        } else if (filter === 'N-Z') {
-          $("#lastName tbody tr td:nth-child(2):not(:containsRegex('^[n-zN-Z]'))").parent().addClass("hidden");
+         function filterCharacters() {
+            const rows = $('#charactersTable tbody tr');
+    
+            const countAM = rows.filter(function() {
+                const lastName = $(this).find('td:nth-child(2)').text();
+                return lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
+            }).length;
+    
+            const countNZ = rows.length - countAM;
+    
+            $('#filterAM').text(`A - M (${countAM})`);
+            $('#filterNZ').text(`N - Z (${countNZ})`);
+    
+            rows.each(function() {
+                const lastName = $(this).find('td:nth-child(2)').text();
+                const showAM = lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
+                const showNZ = lastName.toUpperCase().charCodeAt(0) > 'M'.charCodeAt(0);
+    
+                if ($('#filterAM').hasClass('active')) {
+                    $(this).toggle(showAM);
+                } else if ($('#filterNZ').hasClass('active')) {
+                    $(this).toggle(showNZ);
+                } else {
+                    $(this).show();
+                }
+            });
         }
-      }
-  
-      // Custom jQuery :containsRegex selector
-      $.expr[':'].containsRegex = function (a, i, m) {
-        var pattern = new RegExp(m[3]);
-        return pattern.test($(a).text());
-      };
+    
+        $('#filterAM, #filterNZ').on('click', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            filterCharacters();
+        }
 
-    }
-})
+        )},
+});
