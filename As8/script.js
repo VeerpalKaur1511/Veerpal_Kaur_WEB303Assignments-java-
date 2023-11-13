@@ -29,8 +29,8 @@ $('h1').after('<input/>');
 $('input').attr('id', 'search');
 
 // dd  a button after table 
-$('table').after( '<button onclick="filter-AM">A - M (0)</button>')
-$('table').after('<button onclick="filter-NZ">N - Z (0)</button>')
+$('table').after( '<button id="filterAM">A-M (0)</button>')
+$('table').after('<button id="filterNZ">N-Z (0)</button>')
 
 // get content of json file 
 
@@ -96,43 +96,40 @@ $.ajax({
         }else{
             $search.on('input', searchFirstname);
         }
+    },
+});
+// filter functions for buttons
+$('#filterAM').on('click', function () {
+    filterTable('A', 'M');
+});
 
+$('#filterNZ').on('click', function () {
+    filterTable('N', 'Z');
+});
 
-            // Filter table function
-            function filterEmp() {
-                const rows = $('#charactersTable tbody tr');
-        
-                const countAM = rows.filter(function() {
-                    const lastName = $(this).find('td:nth-child(2)').text();
-                    return lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
-                }).length;
-        
-                const countNZ = rows.length - countAM;
-        
-                $('#filterAM').text(`A - M (${countAM})`);
-                $('#filterNZ').text(`N - Z (${countNZ})`);
-        
-                rows.each(function() {
-                    const lastName = $(this).find('td:nth-child(2)').text();
-                    const showAM = lastName.toUpperCase().charCodeAt(0) <= 'M'.charCodeAt(0);
-                    const showNZ = lastName.toUpperCase().charCodeAt(0) > 'M'.charCodeAt(0);
-        
-                    if ($('#filterAM').hasClass('active')) {
-                        $(this).toggle(showAM);
-                    } else if ($('#filterNZ').hasClass('active')) {
-                        $(this).toggle(showNZ);
-                    } else {
-                        $(this).show();
-                    }
-                });
-            }
-        
-            $('#filterAM, #filterNZ').on('click', function() {
-                $(this).addClass('active').siblings().removeClass('active');
-                filterEmp();
-            }
+// filter function
+function filterTable(startChar, endChar) {
+    let count = 0;
+
+    $('tbody .row').each(function () {
+        let lastName = $(this).find('td:nth-child(2)').text(); // assuming last name is in the second column
+        let firstChar = lastName.trim().charAt(0).toUpperCase();
+
+        if (firstChar >= startChar && firstChar <= endChar) {
+            $(this).show();
+            count++;
+        } else {
+            $(this).hide();
+        }
+    });
+
+    // update the filter button text with the count
+    if (startChar === 'A') {
+        $('#filter-AM').text('A - M (${count})');
+    } else {
+        $('#filter-NZ').text('N - Z (${count})');
+    }
+}
     
-            )},
+        
 
-    
-})
