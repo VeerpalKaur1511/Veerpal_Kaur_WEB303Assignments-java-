@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(221, 230, 173);
+}
+input {
+    margin-left: 10px;
+    border: 2px solid brown;
+    width: 20%;
+    padding: 5px;
+}
+table {
+    margin: 20px auto;
+    border: 2px solid brown;
+}
+
+td {
+    width: 10%;
+    font-size: 20px;
+}
+
+thead td {
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+thead th a {
+    color: brown;
+    cursor:pointer;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+table, tr, th,  td{
+border:1px solid rgb(0, 0, 0);
+border-collapse: collapse;
+
+}
+a.ascending::after{
+    content: "\25B2";
+}
+
+a.descending::after{
+    content: "\25BC";
+
+}
+a.no-sort::after{
+    content:"";
+}

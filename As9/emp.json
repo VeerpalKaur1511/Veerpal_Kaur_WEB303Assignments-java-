@@ -1,0 +1,61 @@
+[
+    {
+        "firstName": "Yuvraj",
+        "lastName" : "Hans",
+        "age": "25",
+        "occupation": "Actor",
+        "city": "Barnala",
+        "role" : "Deputy" ,
+        "dob" : "1997-08-15"
+
+
+    },
+    {
+        "firstName": "Binnu",
+        "lastName" : "Dhillon" ,
+        "age": "35",
+        "occupation": "Hero",
+        "city": "london",
+        "role" : "Japji",
+        "dob" : "1987-07-11"
+
+
+    },
+    {
+        "firstName": "Jassi",
+        "lastName" : "Gill",
+        "age": "27",
+        "occupation": "Singer",
+        "city": "Bathinda",
+        "role" : "Chhada" ,
+        "dob" : "1990-11-07"
+
+
+    },
+    {
+        "firstName": "Babbal",
+        "lastName" : "Rai" ,
+        "age": "45",
+        "occupation": "Actor",
+        "city": "Quebec",
+        "role" : "Pinky",
+        "dob" : "1999-05-27"
+
+
+    },
+    {
+        "firstName": "Jaswinder",
+        "lastName" : "Bhalla",
+        "age": "65",
+        "occupation": "Master Singer",
+        "city": "Amritsar ",
+        "role" : "kirpall",
+        "dob" : "1989-12-07" 
+
+
+    }
+    
+    
+    
+
+]
